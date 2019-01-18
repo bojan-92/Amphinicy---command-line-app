@@ -1,7 +1,7 @@
 10-13h sprint - to do: 
 
 ---1. boja u zeleno, remove avatar nature gluposti
-2. slicica ispod my profile
+----2. slicica ispod my profile
 ---3. skloniti rodjendan, zamneiti london, uk, sa Belgrade, SR
 i designer, UI, sa Java Developer, BE, VAT
 
