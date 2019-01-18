@@ -1,0 +1,11 @@
+10-13h sprint - to do: 
+
+1. boja u zeleno, remove avatar nature gluposti
+2. slicica ispod my profile
+3. skloniti rodjendan, zamneiti london, uk, sa Belgrade, SR
+i designer, UI, sa Java Developer, BE, VAT
+
+4. My Groups sekciju ostavljamo, ali zamenimo sa My published questions , a My events i My Photos sklonimo
+
+5. Interests nam ostaje, ali menjamo news, w3schools sa sql java drools ...
+6. sklanjamo sekciju Hey blablabla i Upcoming Eventes Forest Goliday
