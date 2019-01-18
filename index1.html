@@ -9,14 +9,36 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+.w3-theme-d2 {
+color: #fff !important;
+background-color: #00962A !important;
+}
+::-webkit-input-placeholder {
+   font-style: italic;
+}
+:-moz-placeholder {
+   font-style: italic;  
+}
+::-moz-placeholder {
+   font-style: italic;  
+}
+:-ms-input-placeholder {  
+   font-style: italic; 
+}
+
+.w3-green, .w3-hover-green:hover {
+color: #fff!important;
+background-color: #ee5f5b!important;
+}
 </style>
 <body class="w3-theme-l5">
 
 <!-- Navbar -->
+
 <div class="w3-top">
- <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+ <div class="w3-bar w3-theme-d2 w3-left-align w3-large" >
   <a class="w3-bar-item w3-butt on w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <p  class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><img src="nortal.png" style="width: 30px; height: 30px;" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+  <p  class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><img src="nortal2.png" style="width: 30px; height: 30px;" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
@@ -141,19 +163,17 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
           <div class="w3-card w3-round w3-white">
             <div class="w3-container w3-padding">
               <h6 class="w3-opacity">Ask Question</h6>
-              <p contenteditable="true" class="w3-border w3-padding">fsdfs</p>
+              <p contenteditable="true" class="w3-border w3-padding" ></p>
 
-              <input type="text" class="form-control" id="tokenfield" placeholder="Click to add hastags" /><br>
+              <input type="text" class="form-control" id="tokenfield" placeholder="Type to add hashtags ..." /><br>
 
-            
-              
-              <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i> Publish</button> 
+              <button id="publishBtn" type="button" class="w3-button w3-theme" onclick="publish();"><i class="fa fa-pencil"></i> Publish</button> 
             </div>
           </div>
         </div>
       </div>
       
-      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+      <div id="questionBox" class="w3-container w3-card w3-white w3-round w3-margin" hidden><br>
         <img src="/w3images/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
         <span class="w3-right w3-opacity">1 min</span>
         <h4>John Doe</h4><br>
@@ -239,6 +259,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
 
 
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/bootstrap-tokenfield.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/bootstrap-tokenfield.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/css/bootstrap-tokenfield.css" />
@@ -249,6 +270,15 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 
 
 <script>
+
+
+function publish() {
+  var x = document.getElementById("questionBox");
+  x.style.display = "block";
+}
+
+
+
 // Accordion
 function myFunction(id) {
   var x = document.getElementById(id);
@@ -279,7 +309,7 @@ $('#tokenfield').tokenfield({
   },
   showAutocompleteOnFocus: true
 })
-</script>
 
+</script>
 </body>
 </html> 
