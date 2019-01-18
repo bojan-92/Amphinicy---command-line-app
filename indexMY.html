@@ -206,6 +206,16 @@ background-color: #ee5f5b!important;
             <div class="w3-container w3-padding">
               <h4 class="w3-opacity" >Ask Question </h4>
               <p contenteditable="true" class="w3-border w3-padding" id='questionInputField'></p>
+			  <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
 
               <input type="text" class="form-control" id="tokenfield" placeholder="Type to add hashtags ..." /><br>
 
@@ -225,7 +235,6 @@ background-color: #ee5f5b!important;
 		</div>
           <div class="w3-row-padding" style="margin:0 -16px">
         </div>
-        <button id='likeBtn' type="button" class="w3-button w3-theme-d1 w3-margin-bottom" onclick="like();"><i class="fa fa-thumbs-up"></i>  Like</button> 
         <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i> Make a Reply</button> 
 		
       </div>
@@ -233,11 +242,11 @@ background-color: #ee5f5b!important;
 	  <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
        
         <span class="w3-right w3-opacity">16 min</span>
-        <h4>John Deer</h4><br>
+        <h4>John Deer <p class="w3-opacity" style='font-size:12px;'><i>QA, VAT</i></p></h4><br>
         <hr class="w3-clear">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <button onclick='like();' type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
-        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i> Make a Reply</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom" onclick='makeReply();'><i class="fa fa-comment"></i> Make a Reply</button> 
 		<div id='fourLikes'><p class="w3-opacity"><label style='font-size:10px; align:right;'>4 Likes</label></p></div>
 		<div id='fiveLikes' style='display:none';><p class="w3-opacity"><label style='font-size:10px; align:right;'>5 Likes</label></p></div>
       </div> 
@@ -292,16 +301,23 @@ background-color: #ee5f5b!important;
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/css/tokenfield-typeahead.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/css/tokenfield-typeahead.min.css" />
 
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
 <script>
+
+function makeReply() {
+	console.log('make reply btn');
+	document.getElementById("replyInput").style.display = 'block';
+}
 
 function like() {
 	console.log('like btn');
 	document.getElementById("fourLikes").style.display = 'none';
 	document.getElementById("fiveLikes").style.display = 'block';
 }
-
 
 function publish() {
   var x = document.getElementById("questionBox");
@@ -313,7 +329,6 @@ function publish() {
   var z = document.getElementById("tokenfield").value;  
   document.getElementById("tagovi").innerHTML = z;
   
- 
 }
 
 
