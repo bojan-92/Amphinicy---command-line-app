@@ -9,7 +9,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 .kontejner {
   width: 100%;
   height: 100%;
@@ -36,8 +39,17 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 .w3-theme-d2 {
 color: #fff !important;
 background-color: #00962A !important;
+<<<<<<< Updated upstream
 
 
+=======
+}
+
+.w3-green, .w3-hover-green:hover {
+color: #fff!important;
+background-color: #ee5f5b!important;
+}
+>>>>>>> Stashed changes
 
 .skills {
   text-align: right;
@@ -50,9 +62,20 @@ background-color: #00962A !important;
 .css {width: 80%; background-color: #2196F3;}
 .js {width: 65%; background-color: #f44336;}
 .php {width: 60%; background-color: #808080;}
+<<<<<<< Updated upstream
 
   <p  class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><img src="nortal2.png" style="width: 30px; height: 30px;" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
 
+=======
+</style>
+<body class="w3-theme-l5">
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+  <a class="w3-bar-item w3-butt on w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <p  class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><img src="nortal.png" style="width: 138px; height: 69px;" style="height:106px;width:106px" alt="Avatar"></p>
+>>>>>>> Stashed changes
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
@@ -183,23 +206,31 @@ background-color: #00962A !important;
           <div class="w3-card w3-round w3-white">
             <div class="w3-container w3-padding">
               <h6 class="w3-opacity">Ask Question</h6>
-              <p contenteditable="true" class="w3-border w3-padding" id='questionInputField'></p>
+              <p contenteditable="true" class="w3-border w3-padding">fsdfs</p>
 
-              <input type="text" class="form-control" id="tokenfield" placeholder="Type to add hashtags ..." /><br>
+              <input type="text" class="form-control" id="tokenfield" placeholder="Click to add hastags" /><br>
 
-              <button id="publishBtn" type="button" class="w3-button w3-theme" onclick="publish();"><i class="fa fa-pencil"></i> Publish</button> 
+            
+              
+              <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i> Publish</button> 
             </div>
           </div>
         </div>
       </div>
       
-      <div id="questionBox" class="w3-container w3-card w3-white w3-round w3-margin" hidden><br>
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="/w3images/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
         <span class="w3-right w3-opacity">1 min</span>
-        <h4>John Doe</h4>
+        <h4>John Doe</h4><br>
         <hr class="w3-clear">
-        <p id='questionTxt'></p>
-        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           <div class="w3-row-padding" style="margin:0 -16px">
+            <div class="w3-half">
+              <img src="/w3images/lights.jpg" style="width:100%" alt="Northern Lights" class="w3-margin-bottom">
+            </div>
+            <div class="w3-half">
+              <img src="/w3images/nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom">
+          </div>
         </div>
         <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like</button> 
         <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i> Make a Reply</button> 
@@ -273,7 +304,6 @@ background-color: #00962A !important;
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
 
 
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/bootstrap-tokenfield.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/bootstrap-tokenfield.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/css/bootstrap-tokenfield.css" />
@@ -284,18 +314,6 @@ background-color: #00962A !important;
 
 
 <script>
-
-
-function publish() {
-  var x = document.getElementById("questionBox");
-  x.style.display = "block";
-
-  var y = document.getElementById("questionInputField").innerHTML;
-  document.getElementById("questionTxt").innerHTML = y;
-}
-
-
-
 // Accordion
 function myFunction(id) {
   var x = document.getElementById(id);
@@ -326,15 +344,7 @@ $('#tokenfield').tokenfield({
   },
   showAutocompleteOnFocus: true
 })
-
-$('#questionTags').tokenfield({
-  autocomplete: {
-    source: ['red','blue','green','yellow','violet','brown','purple','black','white'],
-    delay: 100
-  },
-  showAutocompleteOnFocus: true
-})
-
 </script>
+
 </body>
 </html> 
